@@ -11,17 +11,18 @@
 /* Özel font import - mistik görünüm için */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Ana body stilleri - koyu mistik tema */
+/* Ana body stilleri - profesyonel koyu tema */
 @layer base {
   body {
-    @apply bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900;
+    @apply bg-slate-900;
     @apply text-white min-h-screen;
     font-family: 'Inter', sans-serif;
   }
 
   /* Başlıklar için özel font */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
   }
 }
 
