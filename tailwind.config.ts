@@ -48,6 +48,10 @@ const config: Config = {
         'mystical-pulse': 'mystical-pulse 3s ease-in-out infinite',
         'float': 'float 4s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2s ease-in-out infinite',
+        'fadeIn': 'fadeIn 0.5s ease-out',
+        'slideUp': 'slideUp 0.6s ease-out',
+        'scaleIn': 'scaleIn 0.4s ease-out',
       },
       keyframes: {
         'mystical-pulse': {
@@ -65,6 +69,22 @@ const config: Config = {
         'glow': {
           '0%': { opacity: '0.8' },
           '100%': { opacity: '1' },
+        },
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        'fadeIn': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slideUp': {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'scaleIn': {
+          '0%': { opacity: '0', transform: 'scale(0.8)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         }
       },
       // Özel fontlar
