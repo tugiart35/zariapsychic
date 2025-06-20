@@ -13,7 +13,7 @@ import { usePathname } from 'next/navigation'
 const navigationItems = [
   {
     name: 'Tarot',
-    href: '/',
+    href: '/a-tarot',
     icon: '⭐',
     activeIcon: '⭐'
   },
@@ -25,7 +25,7 @@ const navigationItems = [
   },
   {
     name: 'Anasayfa',
-    href: '/anasayfa',
+    href: '/',
     icon: '💛',
     activeIcon: '💛'
   },
