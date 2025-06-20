@@ -1,0 +1,37 @@
+{
+  "project": {
+    "name": "Mobil Uyumlu Web Uygulaması",
+    "description": "Bu proje, %100 mobil uyumlu ve sonradan mobil uygulamaya kolayca dönüştürülebilecek şekilde tasarlanmıştır. Öncelikli olarak sadece görsel arayüz (frontend) yapılacaktır. Kodlamada yeni olan biri olarak anlamam için her dosyanın başına Türkçe açıklama eklenecektir."
+  },
+  "rules": [
+    {
+      "title": "Mobil Öncelikli Tasarım",
+      "description": "Tasarım tamamen mobil uyumlu olmalı. Geniş ekranlar ikinci planda düşünülmeli. Tüm sayfa bileşenleri küçük ekranlarda düzgün çalışmalı."
+    },
+    {
+      "title": "Basit Kod Yapısı",
+      "description": "Kod yapısı sade ve anlaşılır olmalı. Karmaşık yapılar yerine modüler ve bölünmüş bileşenler kullanılmalı."
+    },
+    {
+      "title": "Türkçe Açıklamalar",
+      "description": "Her bileşenin ve sayfanın en başında Türkçe açıklayıcı yorum satırı yer almalı. Bu açıklamalar ne işe yaradığını basit bir dille anlatmalı."
+    },
+    {
+      "title": "Güvenli Kodlama Temelleri",
+      "description": "Giriş formu, kullanıcı etkileşimleri gibi yerlerde temel güvenlik önlemleri (XSS, CSRF gibi) göz önünde bulundurulmalı. Şimdilik backend olmasa bile ilerisi için hazırlıklı olunmalı."
+    },
+    {
+      "title": "Kolay Mobil Klonlama",
+      "description": "Web tamamlandığında kolayca bir mobil uygulamaya dönüştürülebilmesi için React veya benzeri mobil uyumlu framework’ler tercih edilmeli."
+    },
+    {
+      "title": "Hazır Backend Bağlantı Noktaları",
+      "description": "Kodda backend bağlanacak alanlar yorum satırıyla 'burada backend'e bağlanılacak' şeklinde not edilmeli. Böylece ileride backend entegresi kolay olur."
+    }
+  ],
+  "techStack": {
+    "frontend": "React (Next.js veya Vite), TailwindCSS",
+    "backend": "Henüz eklenmeyecek, ancak ileride Firebase / Supabase gibi servisler eklenebilir",
+    "deployment": "Vercel veya Netlify gibi kolay platformlar tercih edilecek"
+  }
+}
