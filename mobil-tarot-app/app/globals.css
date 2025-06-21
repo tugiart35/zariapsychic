@@ -1,0 +1,87 @@
+/*
+  Global CSS Dosyası - Mistik Tarot Teması
+  Bu dosya tüm uygulama genelinde kullanılacak temel stilleri içerir.
+  Mobil öncelikli tasarım prensibi ile hazırlanmıştır.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Özel font import - mistik görünüm için */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Ana body stilleri - profesyonel koyu tema */
+@layer base {
+  body {
+    @apply bg-slate-900;
+    @apply text-white min-h-screen;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Başlıklar için özel font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Özel animasyonlar */
+@layer utilities {
+  .mystical-glow {
+    @apply shadow-lg shadow-purple-500/25;
+    animation: mystical-pulse 3s ease-in-out infinite;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent;
+  }
+
+  .mystical-border {
+    @apply border border-purple-500/30 rounded-lg backdrop-blur-sm;
+  }
+}
+
+/* Animasyon tanımları */
+@keyframes mystical-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 40px rgba(168, 85, 247, 0.3);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Scrollbar özelleştirme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-500;
+}
