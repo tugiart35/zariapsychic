@@ -44,6 +44,44 @@
   .mystical-border {
     @apply border border-purple-500/30 rounded-lg backdrop-blur-sm;
   }
+
+  /* 3D Transform Utilities */
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Modern Card Shadows */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Gradient Animations */
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  /* Floating Animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Pulse Glow */
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
 }
 
 /* Animasyon tanımları */
@@ -65,8 +103,42 @@
   }
 }
 
-.floating {
-  animation: float 4s ease-in-out infinite;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.6);
+  }
+}
+
+/* Card Flip Animation */
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.card-flip {
+  animation: cardFlip 0.6s ease-in-out;
 }
 
 /* Scrollbar özelleştirme */
@@ -84,4 +156,76 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-purple-500;
+}
+
+/* Responsive breakpoints for extra small devices */
+@media (max-width: 375px) {
+  .xs\:w-18 {
+    width: 4.5rem;
+  }
+  .xs\:h-28 {
+    height: 7rem;
+  }
+  .xs\:w-16 {
+    width: 4rem;
+  }
+  .xs\:h-24 {
+    height: 6rem;
+  }
+  .xs\:w-14 {
+    width: 3.5rem;
+  }
+  .xs\:h-20 {
+    height: 5rem;
+  }
+  .xs\:w-12 {
+    width: 3rem;
+  }
+  .xs\:h-18 {
+    height: 4.5rem;
+  }
+  .xs\:top-3 {
+    top: 0.75rem;
+  }
+  .xs\:bottom-3 {
+    bottom: 0.75rem;
+  }
+  .xs\:left-3 {
+    left: 0.75rem;
+  }
+  .xs\:right-3 {
+    right: 0.75rem;
+  }
+  .xs\:top-10 {
+    top: 2.5rem;
+  }
+  .xs\:bottom-10 {
+    bottom: 2.5rem;
+  }
+}
+
+/* Modern glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon glow effects */
+.neon-purple {
+  box-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6;
+}
+
+.neon-blue {
+  box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #3b82f6;
+}
+
+/* Hover effects for cards */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
