@@ -13,7 +13,7 @@ import PastPresentFuture from '@/components/specific/tarot/PastPresentFuture'
 import Celtics from '@/components/specific/tarot/Celtics'
 import { TarotCard } from '@/lib/a-tarot-helpers'
 
-// Tarot açılım türleri - modüler bileşenlerle
+ //Tarot açılım türleri - modüler bileşenlerle
 const tarotSpreads = [
   {
     id: 'daily',
@@ -105,15 +105,7 @@ export default function TarotPage() {
       {/* Ana içerik alanı */}
       <main className="flex-1 px-6 py-8">
         
-        {/* Üst başlık */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-amber-400 mb-2">
-            Tarot Açılımları
-          </h1>
-          <p className="text-gray-400 text-sm">
-            Bir açılım seçerek ruhani yolculuğuna başla
-          </p>
-        </div>
+      
 
         {/* Açılım seçenekleri - yatay scroll */}
         <div className="mb-8">
@@ -142,10 +134,17 @@ export default function TarotPage() {
           
           {/* Seçilen açılımın açılması yazısı */}
           {currentSpread && (
+            <div>
             <div className="text-left mt-3 px-2">
               <p className="text-gray-400 text-sm">
                 {currentSpread.name} açılması
               </p>
+            </div>
+            <div className="text-left mt-3 px-2">
+              <p className="text-gray-400 text-sm">
+                {currentSpread.description}  {/* // description yerine çekilen kartın sorusu yazılacak.ortalı bir şekilde çeklecek kartın sorusu yazılacak. */}
+              </p>
+            </div>
             </div>
           )}
         </div>
